@@ -1,0 +1,182 @@
+/* General container adjustments */
+.places-container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 150px 30px;
+  }
+  
+  /* Header section */
+  .header-section {
+    text-align: left;
+    padding: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .header-section h1 {
+    font-size: 80px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: left; /* Center text horizontally */
+    margin-left: 360px;
+  }
+  
+  .header-section h2 {
+    font-size: 80px;
+    color: #666;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Sections container */
+  .sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Individual section styles */
+  .section {
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Content overlay for cards */
+  .content-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    padding: 60px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Title styling with shadow */
+  .content-overlay h3 {
+    font-size: 48px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Shadow effect using pseudo-element */
+  .content-overlay h3::before {
+    content: attr(data-title); /* Copies text from data-title */
+    position: absolute;
+    top: -150px; /* Offset shadow */
+    left: 170px; /* Offset shadow */
+    z-index: 0;
+    color: rgba(255, 250, 250, 0.253); /* Shadow text color */
+    font-size: 82px; /* Same size as original text */
+    transform: scale(1.1); /* Slightly larger shadow */
+    text-transform: uppercase;
+    /* transition: all 0.3s ease; /* Smooth hover animation */
+  } */
+  
+  /* Hover effect for title */
+  .content-overlay h3:hover::before {
+    top: 10px; /* Move shadow */
+    left: 10px;
+    color: rgba(0, 0, 0, 0.7); /* Darker shadow */
+    transform: scale(1.2); /* Enlarge shadow */
+  }
+  
+  /* Card description styling */
+  .content-overlay p {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    max-width: 800px;
+    line-height: 1.8;
+  }
+  
+  /* Locations list */
+  .locations {
+    margin-top: 20px;
+  }
+  
+  .locations p {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .locations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .locations li {
+    padding-left: 30px;
+    position: relative;
+    font-size: 18px;
+  }
+  
+  .locations li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+  }
+  
+  /* Button styles */
+  .explore-button {
+    background-color: #FFD700;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-button:hover {
+    background-color: #FFC700;
+  }
+  
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    .header-section h1 {
+      font-size: 48px;
+    }
+  
+    .header-section h2 {
+      font-size: 36px;
+    }
+  
+    .content-overlay {
+      padding: 20px;
+    }
+  
+    .content-overlay h3 {
+      font-size: 28px;
+    }
+  
+    .locations ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .section {
+      height: 400px;
+    }
+  }
+  

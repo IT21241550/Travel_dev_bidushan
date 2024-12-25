@@ -1,0 +1,45 @@
+/* Container Styles */
+.container {
+    width: 100%;
+    min-height: 200vh;
+    padding: 60px;
+    background: url('../asset/image/img25.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Top Card Styles */
+.intro-card {
+    width: 100%;
+    max-width: 1200px; 
+    height: auto; 
+    min-height: 400px; 
+    padding: 50px;
+    margin: 80px auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+        url('../asset/image/imgp1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+}
+
+/* Bottom Card Styles */
+.surfing-card {
+    width: 100%;
+    max-width: 1200px;
+    height: auto; 
+    min-height: 300px; 
+    padding: 40px;
+    margin: 80px auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+        url('../asset/image/map.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Other styles remain unchanged */

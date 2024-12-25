@@ -1,0 +1,111 @@
+/* Fixed Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  background-color: transparent !important;
+  backdrop-filter: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  height: 100px; /* Explicitly set navbar height */
+  border: none; /* Remove any border */
+  box-shadow: none; /* Remove any box-shadow */
+}
+
+/* Navbar links styling */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 40px;
+}
+
+.nav-links li {
+  font-size: 2rem;
+}
+
+.nav-links a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgb(5, 5, 5); /* Base color */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #0066cc; /* Change to blue on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Underline effect on hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: rgba(10, 10, 10, 0.5);
+  transition: width 0.3s ease;
+}
+
+/* Expand underline effect on hover */
+.nav-links a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/* Underline effect on active (selected) link */
+.nav-links a.active::after {
+  width: 100%; /* Full width underline for active link */
+  
+  background-color: #f6f7f8; /* Blue underline for active link */
+}
+
+/* Remove the box effect when the link is focused or active */
+.nav-links a:focus,
+.nav-links a:active {
+  outline: none; /* Remove outline */
+  box-shadow: none; /* Remove any box-shadow */
+}
+
+/* Active link style */
+.nav-links a.active {
+  font-weight: 700;
+}
+
+/* Change header background on scroll */
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(5px);
+  border: none; /* Ensure no border when scrolled */
+  box-shadow: none; /* Ensure no box-shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility Focus State */
+.nav-links a:focus {
+  outline: none;
+  box-shadow: none;
+}
